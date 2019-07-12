@@ -1,0 +1,191 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-12 col-md-8 form-box">
+      <form [formGroup]="conditionsForm" (ngSubmit)= "onSubmit()">
+
+        <!-- Title -->
+        <div class= "title">Conditions Form</div>
+
+        <!-- Name -->
+        <div class = "row">
+          <div class="form-group col-12 col-md-6">
+            <div class = "name">Name</div>
+              <input 
+                type = "text" 
+                id = "name"
+                formControlName = "name"
+                class = "form-control">
+                <span
+                  *ngIf="!signupForm.get('name').valid && signupForm.get('name').touched" class = "form-text text-muted">Please enter a name!
+                </span> 
+        </div>
+  
+            <!-- Email -->
+            <div class="form-group col-12 col-md-6">
+                <div class= "email">Email</div>
+                <input 
+                  type = "text" 
+                  id = "email"
+                  formControlName = "email"
+                  class = "form-control">
+                  <span
+                  *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched" class = "form-text text-muted">Please enter an email!
+                </span> 
+                </div>
+            </div>
+
+          <!-- Website-->
+          <div class = "row">
+            <div class="form-group col-12 col-md-6">
+                <div class = "website">Website</div>
+                <input 
+                  type = "text" 
+                  id = "website"
+                  formControlName = "website"
+                  class = "form-control">
+            </div>
+          </div>
+
+          <!-- Choose Device -->
+          <div class="form-group">
+              <div class = "chooseDevice">Choose Device</div>
+              <select 
+                type = "text" 
+                id = "chooseDevice"
+                formControlName = "chooseDevice"
+                class = "form-control"
+                placeholder = "Select Device">
+                <option>Mobile</option>
+                <option>Tablet</option>
+                <option>PC </option>
+              </select>
+              <span
+              *ngIf="!signupForm.get('chooseDevice').valid && signupForm.get('chooseDevice').touched" class = "form-text text-muted"> Please select a device!
+              </span> 
+          </div>
+           
+          <!-- Choose Color -->
+          <!-- <div class= "form-group">
+          <label for= "chooseColor"> Choose Color </label>
+          <div class= "radio" *ngFor="let type of chooseColor">
+            <input 
+            type= "checkbox" 
+            formControlName = "chooseColor"
+            [value]="type"> {{ type }}
+          </div>
+        </div> -->
+
+        <div class = "form-group">
+          <div class = "chooseColor">Choose Color
+            <div class = "checkbox" *ngFor = "let type of chooseColor">
+              <input type ="checkbox">  
+            </div>
+          </div>
+          
+        </div>
+<!-- 
+        <div>
+          <input type = "radio" name = 'some color'> color
+          <input type = "checkbox" name = "some other color">
+        </div> -->
+
+        <div class = colorboxcheck>
+          <div class = "colorBox">
+            <input type = "checkbox" name = 'red' class = "colorcheck"> Red
+          </div>
+          <div class = "colorBox"> 
+            <input type = "checkbox" name = 'green' class = "colorcheck"> Green
+          </div>
+          <div class = "colorBox">
+            <input type = "checkbox" name = 'blue' class = "colorcheck"> Blue
+          </div>
+        </div>
+        
+
+        <div class = "productquantity"> Product Quantity</div>
+        <div class = "slidecontainer">
+          <input 
+          type = "range" 
+          min="1" 
+          max="1000" 
+          value = "50" 
+          class = "slider" 
+          id= "my Range">
+        </div>
+        
+        
+        <div class = timepicker>
+          <div class = "bookingdate">Booking Date</div>
+          <div class = calendars>
+            <div class = "fromdate">From</div>
+            <input type = "date" class = "calendar">
+          </div>
+          <div class = calendars>
+            <div class = "todate">To</div>
+            <input type = "date" class = "calendar">
+          </div>  
+        </div>
+
+        <!-- <div>
+          <label class = "container">
+            <input type = "checkbox" name = 'red'> Red
+            <span class = "checkmark"></span>
+          </label>
+        </div> -->
+
+        <!-- <form [formGroup] = "signupForm">
+          
+        </form>
+ -->
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- &.hover
+cursor:pointer
+text-decor...: underline -->
+
+
+
+
+<!-- *ngIf="formname.value.addFeedback" (also create in .ts "this.name")
+  <form [formgroup] = "name">
+<input
+  formControlName="addFeeback"
+  type = "">
+  </form>
+
+
+
+
+  <textarea>
+    *ngIf="formname.value.addFeedback
+  </textarea>
+
+  this.name = this.fb.group ({    (Goes on .ts)
+    etc.
+
+    this.carForm.valueChanges.subscribe(val => {
+
+    })
+  })
+
+
+
+
+<form>
+
+</form>
+
+.TS
+validatedQuanitity (): void{
+  let quanity = this.CF.value.quant.toString();
+  quantity.replace(/\D+/g '');
+  this.carForm.controls.quantity.setValue(+quantity);
+}
+.HTML
+
+ -->
+<!-- 
+ {(name.value .json)} -->
