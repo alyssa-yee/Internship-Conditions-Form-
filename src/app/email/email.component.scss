@@ -1,0 +1,17 @@
+.container {
+    display: flex
+    flex-direction column-reverse;
+}
+
+.col-lg-8 {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Nunito';
+    height: 1000px;
+}
+
+.col-lg-4 {
+    background-color: rgb(235, 235, 235);
+    height: 1000px;
+    font-family: 'Nunito';
+}
+
